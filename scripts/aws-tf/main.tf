@@ -36,7 +36,7 @@ resource "aws_security_group" "egress-all" {
 
 resource "aws_instance" "Demo" {
   ami           = "ami-08e5424edfe926b43"
-  instance_type = "t2.micro"
+  instance_type = "z1d.metal"
   key_name = "eksa-admin"
   security_groups= ["allow-ssh", "egress-all"]
   tags = {
